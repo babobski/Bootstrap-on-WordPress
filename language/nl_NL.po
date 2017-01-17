@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bootstrap 3.3.4\n"
+"POT-Creation-Date: 2015-06-21 21:20+0100\n"
+"PO-Revision-Date: 2015-06-21 21:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: babobski\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:14
+msgid "Page not found"
+msgstr "Pagina niet gevonden"
+
+#: ../archive.php:22 ../archive.php:24 ../archive.php:26 ../archive.php:28
+msgid "Archive"
+msgstr "Archief"
+
+#: ../archive.php:36 ../author.php:28 ../category.php:21 ../index.php:27
+#: ../search.php:22 ../single.php:19
+msgid "Leave a Comment"
+msgstr "Laat een reactie achter"
+
+#: ../archive.php:36 ../author.php:28 ../category.php:21 ../index.php:27
+#: ../search.php:22 ../single.php:19
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: ../archive.php:36 ../author.php:28 ../category.php:21 ../index.php:27
+#: ../search.php:22 ../single.php:19
+msgid "% Comments"
+msgstr "% Reacties"
+
+#: ../archive.php:44
+msgid "No posts to display"
+msgstr "Geen berichten om te tonen"
+
+#: ../author.php:16
+msgid "Author Archives:"
+msgstr "Auteur Archief:"
+
+#: ../author.php:20 ../single.php:24
+msgid "About"
+msgstr "Over"
+
+#: ../author.php:36
+msgid "No posts to display for"
+msgstr "Geen berichten te tonen voor"
+
+#: ../category.php:15
+msgid "Category Archive:"
+msgstr "Categorie Archief:"
+
+#: ../category.php:28
+msgid "No posts to display in"
+msgstr "Geen berichten om te tonen in"
+
+#: ../comments.php:46
+msgid "Comments are closed"
+msgstr "Reacties niet mogelijk"
+
+#: ../comments.php:66
+msgid "Name"
+msgstr "Naam"
+
+#: ../comments.php:69
+msgid "Email"
+msgstr "E-mail"
+
+#: ../comments.php:73
+msgid "Comment"
+msgstr "Reactie"
+
+#: ../comments.php:95
+msgid "Name is required"
+msgstr "Naam is een verplicht veld"
+
+#: ../comments.php:102
+msgid "Email is required"
+msgstr "E-mailadres is verplicht"
+
+#: ../comments.php:109
+msgid "Comment is required"
+msgstr "Commentaar is vereist"
+
+#: ../index.php:21
+msgid "Latest Posts"
+msgstr "Laatste berichten"
+
+#: ../index.php:35
+msgid "Nothing to show yet."
+msgstr "Er is nog niks om te tonen."
+
+#: ../search.php:16
+msgid "Search Results for"
+msgstr "Zoekresultaten voor"
+
+#: ../search.php:30
+msgid "No results found for"
+msgstr "Geen resultaten gevonden voor"
+
+#: ../searchform.php:3
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../searchform.php:5
+msgid "Submit"
+msgstr "Verzenden"
+
+#~ msgid "Bootstrap 3.3.4 Theme Settings"
+#~ msgstr "Bootstrap 3.3.4 thema-instellingen"
+
+#~ msgid "Site Settings"
+#~ msgstr "Site-instellingen"
+
+#~ msgid "Seo Settings"
+#~ msgstr "Seo instellingen"
+
+#~ msgid "Display company name after title"
+#~ msgstr "Bedrijfsnaam achter de titel "
+
+#~ msgid "Title separator"
+#~ msgstr "Titel scheidingsteken"
+
+#~ msgid "Homepage Seo title"
+#~ msgstr "Homepagina Seo Titel"
+
+#~ msgid "Hompage Seo Description"
+#~ msgstr "Homepagina Seo Beschrijving"
+
+#~ msgid "Hompage Seo Keywords"
+#~ msgstr "Homepagina Seo Keywords"
+
+#~ msgid "Some site defaults"
+#~ msgstr "Een paar site instellingen"
+
+#~ msgid "Homepage settings:"
+#~ msgstr "Homepagina instellingen:"
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "Page title"
+#~ msgstr "Titel pagina"
+
+#~ msgid "Page description"
+#~ msgstr "Paginabeschrijving"
+
+#~ msgid "Page keywords"
+#~ msgstr "Pagina keywords"
+
+#~ msgid "No index / No follow (hidden for searchengine)"
+#~ msgstr "No index / No follow (verborgen voor de zoekmachine)"
+
+#~ msgid "Seo Title"
+#~ msgstr "Seo Titel"
+
+#~ msgid "Seo Desciption"
+#~ msgstr "Seo Description"
+
+#~ msgid "Seo Keywords"
+#~ msgstr "Seo Keywords"
+
+#~ msgid "No Index / No Follow"
+#~ msgstr "No Index / No Follow"
+
+#~ msgid "No index / No Follow (hidden for searchengine)"
+#~ msgstr "No index / no Follow (verborgen voor de zoekmachine)"
+
+#~ msgid "No index / no Follow (hidden for searchengine)"
+#~ msgstr "No index / no Follow (verborgen voor de zoekmachine)"
