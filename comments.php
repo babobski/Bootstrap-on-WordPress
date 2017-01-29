@@ -14,7 +14,9 @@
 ?>
 <div id="comments">
 	<?php if ( post_password_required() ) : ?>
-	<p>This post is password protected. Enter the password to view any comments</p>
+	<p>
+		This post is password protected. Enter the password to view any comments
+	</p>
 </div>
 
 	<?php
@@ -30,20 +32,24 @@
 
 	<?php if ( have_comments() ) : ?>
 
-	<h2><?php comments_number(); ?></h2>
-
-	<ul class="media-list">
-		<?php wp_list_comments( array( 'callback' => 'bootstrap_comment' ) ); ?>
-	</ul>
-
+		<h2>
+			<?php comments_number(); ?>
+		</h2>
+	
+		<ul class="media-list">
+			<?php wp_list_comments( array( 'callback' => 'bootstrap_comment' ) ); ?>
+		</ul>
+	
 	<?php
 		/* If there are no comments and comments are closed, let's leave a little note, shall we?
 		 * But we don't want the note on pages or post types that do not support comments.
 		 */
 		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-	
-	<p><?php echo __('Comments are closed', 'wp_babobski')?></p>
+		
+		<p>
+			<?php echo __('Comments are closed', 'wp_babobski')?>
+		</p>
 	
 	<?php endif; ?>
 
