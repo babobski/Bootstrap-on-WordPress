@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * Starkers functions and definitions
+	 * Bootstrap 4 on Wordpress functions and definitions
 	 *
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
@@ -132,6 +132,48 @@
 	}
 	
 	add_action('wp_before_admin_bar_render', 'wp_logo_admin_bar_remove', 0);
+	
+	// Remove default Dashboard widgets
+	function disable_default_dashboard_widgets() {
+	
+		//remove_meta_box('dashboard_right_now', 'dashboard', 'core');
+		remove_meta_box('dashboard_activity', 'dashboard', 'core');
+		remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');
+		remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');
+		remove_meta_box('dashboard_plugins', 'dashboard', 'core');
+	
+		remove_meta_box('dashboard_quick_press', 'dashboard', 'core');
+		remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');
+		remove_meta_box('dashboard_primary', 'dashboard', 'core');
+		remove_meta_box('dashboard_secondary', 'dashboard', 'core');
+	}
+	add_action('admin_menu', 'disable_default_dashboard_widgets');
+	
+	remove_action('welcome_panel', 'wp_welcome_panel');
+	
+	/* ========================================================================================================================
+	
+	Custom login
+	
+	======================================================================================================================== */
+	
+	// Add custom css
+	function my_custom_login() {
+		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
+	}
+	add_action('login_head', 'my_custom_login');
+	
+	// Link the logo to the home of our website
+	function my_login_logo_url() {
+		return get_bloginfo( 'url' );
+	}
+	add_filter( 'login_headerurl', 'my_login_logo_url' );
+	
+	// Change the title text 
+	function my_login_logo_url_title() {
+		return 'Bootstrap 4 on WordPress';
+	}
+	add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 	
 
 	/* ========================================================================================================================

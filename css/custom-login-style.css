@@ -1,0 +1,56 @@
+/**
+ * Custom login form css
+ *
+ * @package 	WordPress
+ * @subpackage 	Bootstrap 4.0.0
+ * @autor 		Babobski
+ */
+
+body.login {
+	background-image: url('../images/debut_light.png');
+}
+
+.login h1 a {
+	background-image: url('../images/bootstrap-4-wplogo.png');
+	height: 180px;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+.login label {
+	font-size: 12px;
+	color: #555555;
+}
+
+.login input[type="text"] {
+	background-color: #ffffff;
+	border-color: #dddddd;
+	-webkit-border-radius: 4px;
+}
+
+.login input[type="password"] {
+	background-color: #ffffff;
+	border-color: #dddddd;
+	-webkit-border-radius: 4px;
+}
+
+.login .button-primary {
+	float: right;
+	background: rgb(18, 18, 18);
+	color: #ffffff;
+	-webkit-border-radius: 4px;
+	border: 1px solid rgb(18, 18, 18);
+	text-shadow: none;
+	box-shadow: none;
+	padding: 0px 23px 2px !important;
+	-webkit-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.login .button-primary:hover,
+.login .button-primary:active {
+	background: rgb(40, 40, 40);
+	color: #fff;
+	-webkit-border-radius: 4px;
+	border: 1px solid rgb(40, 40, 40);
+}
