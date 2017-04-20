@@ -47,12 +47,12 @@
 	/* ========================================================================================================================
 	
 	Theme specific settings
-
-	Uncomment register_nav_menus to enable a single menu with the title of "Primary Navigation" in your theme
 	
 	======================================================================================================================== */
 
 	add_theme_support('post-thumbnails');
+	
+	//add_image_size( 'name', width, height, crop true|false );
 	
 	register_nav_menus(array('primary' => 'Primary Navigation'));
 
