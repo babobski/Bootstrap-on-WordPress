@@ -9,7 +9,7 @@
  * Please see /external/bootstrap-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 4.0.0
+ * @subpackage 	Bootstrap 4.1.3
  * @autor 		Babobski
  */
 ?>
