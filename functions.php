@@ -101,12 +101,12 @@
 		wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js', array( 'jquery', 'popper' ), BOOTSTRAP_VERSION, true);
 		wp_enqueue_script('bootstrap');
 		
-		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery', 'bootstrap' ), $theme->get( 'version' ), true );
+		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery', 'bootstrap' ), $theme->get( 'Version' ), true );
 		wp_enqueue_script( 'site' );
 
-		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css', BOOTSTRAP_VERSION, array(), 'all' );
+		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css', array(), BOOTSTRAP_VERSION, 'all' );
 		wp_enqueue_style( 'bootstrap' );
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', $theme->get( 'version' ), array(), 'screen' );
+		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', array(), $theme->get( 'Version' ), 'screen' );
 		wp_enqueue_style( 'screen' );
 	}
 	
