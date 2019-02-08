@@ -8,7 +8,7 @@
  * located in the functions.php file.
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 4.1.3
+ * @subpackage 	Bootstrap 4.2.1
  * @autor 		Babobski
  */
 ?>

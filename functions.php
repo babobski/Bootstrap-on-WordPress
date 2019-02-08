@@ -5,11 +5,11 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 4.1.3
+	 * @subpackage 	Bootstrap 4.2.1
 	 * @autor 		Babobski
 	 */
 	
-	define('BOOTSTRAP_VERSION', '4.1.3');
+	define('BOOTSTRAP_VERSION', '4.2.1');
 
 	/* ========================================================================================================================
 	
@@ -106,6 +106,7 @@
 
 		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css', array(), BOOTSTRAP_VERSION, 'all' );
 		wp_enqueue_style( 'bootstrap' );
+		
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', array(), $theme->get( 'Version' ), 'screen' );
 		wp_enqueue_style( 'screen' );
 	}
