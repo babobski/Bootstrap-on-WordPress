@@ -8,7 +8,7 @@
  * located in the functions.php file.
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 4.2.1
+ * @subpackage 	Bootstrap 4.3.1
  * @autor 		Babobski
  */
 ?>
@@ -79,48 +79,49 @@
 				'comment_field'			=> '<div class="form-group">' . '<label for="comment">' . __( 'Comment', 'wp_babobski' ) . '</label><span>*</span>' .
 										'<textarea id="comment" class="form-control" name="comment" rows="3" aria-required="true"></textarea><p id="d3" class="text-danger"></p>' . '</div>',
 				'comment_notes_after' 	=> '',
-				'class_submit'			=> 'btn btn-default'
+				'class_submit'			=> 'btn btn-primary'
 			); ?>
 	<?php comment_form($comments_arg);
 	echo str_replace('class="comment-form"','class="comment-form" name="commentForm" onsubmit="return validateForm();"',ob_get_clean());
 	?>
 	
 		<script>
-			/* basic javascript form validation */
+			/*
+			basic javascript form validation
+			For more information: https://getbootstrap.com/docs/4.3/components/forms/#validation
+			*/
 			function validateForm() {
-			var form 	=  document.forms["commentForm"];
-				x 		= form["author"].value,
-				y 		= form["email"].value,
-				z 		= form["comment"].value,
+			var form 	=  document.forms.commentForm,
+				x 		= form.author.value,
+				y 		= form.email.value,
+				z 		= form.comment.value,
 				flag 	= true,
 				d1 		= document.getElementById("d1"),
 				d2 		= document.getElementById("d2"),
 				d3 		= document.getElementById("d3");
 				
-			if (x == null || x == "") {
+			if (x === null || x === "") {
 				d1.innerHTML = "<?php echo __('Name is required', 'wp_babobski'); ?>";
-				z = false;
+				flag = false;
 			} else {
 				d1.innerHTML = "";
 			}
 			
-			if (y == null || y == "") {
+			if (y === null || y === "") {
 				d2.innerHTML = "<?php echo __('Email is required', 'wp_babobski'); ?>";
-				z = false;
+				flag = false;
 			} else {
 				d2.innerHTML = "";
 			}
 			
-			if (z == null || z == "") {
+			if (z === null || z === "") {
 				d3.innerHTML = "<?php echo __('Comment is required', 'wp_babobski'); ?>";
-				z = false;
+				flag = false;
 			} else {
 				d3.innerHTML = "";
 			}
 			
-			if (z == false) {
-				return false;
-			}
+			return flag;
 			
 		}
 	</script>
