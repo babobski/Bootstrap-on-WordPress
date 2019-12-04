@@ -1,11 +1,11 @@
-	BOOTSTRAP 3.3.4
+	BOOTSTRAP 4.4.1
 	
 	Created by Babobski.
-	Version 1.0 09.05.2015
+	Version 1.6 09.05.2015
 	
 	- - - - - - - - - - - - - - - - - - - - - - -
 	
-	The Bootstrap 3.3.4 Theme is build upon the
+	The Bootstrap 4.4.1 Theme is build upon the
 	Starker totaly naked theme. This theme is
 	created for easy intergreation of wordpress in
 	your theme. This theme is a barebone clean

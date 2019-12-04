@@ -5,11 +5,11 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 4.3.1
+	 * @subpackage 	Bootstrap 4.4.1
 	 * @autor 		Babobski
 	 */
 	
-	define('BOOTSTRAP_VERSION', '4.2.1');
+	define('BOOTSTRAP_VERSION', '4.4.1');
 
 	/* ========================================================================================================================
 	
@@ -95,10 +95,7 @@
 		// Get theme version number (located in style.css)
 		$theme = wp_get_theme();
 		
-		wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', array( 'jquery' ), '1.14.3', true);
-		wp_enqueue_script('popper');
-		
-		wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js', array( 'jquery', 'popper' ), BOOTSTRAP_VERSION, true);
+		wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.bundle.min.js', array( 'jquery' ), BOOTSTRAP_VERSION, true);
 		wp_enqueue_script('bootstrap');
 		
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery', 'bootstrap' ), $theme->get( 'Version' ), true );

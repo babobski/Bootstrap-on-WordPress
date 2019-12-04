@@ -6,7 +6,7 @@
 	 * Bootstrap Utilities Class v.1.1
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 4.3.1
+	 * @subpackage 	Bootstrap 4.4.1
 	 * @autor 		Babobski
 	 *
 	 * We've included a number of helper functions that we use in every theme we produce.
