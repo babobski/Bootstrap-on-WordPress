@@ -35,22 +35,22 @@
 		<h2>
 			<?php comments_number(); ?>
 		</h2>
-	
+
 		<ul class="media-list">
 			<?php wp_list_comments( array( 'callback' => 'bootstrap_comment' ) ); ?>
 		</ul>
-	
+
 	<?php
 		/* If there are no comments and comments are closed, let's leave a little note, shall we?
 		 * But we don't want the note on pages or post types that do not support comments.
 		 */
 		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		
+
 		<p>
 			<?php echo __('Comments are closed', 'wp_babobski')?>
 		</p>
-	
+
 	<?php endif; ?>
 
 	<?php
@@ -58,12 +58,12 @@
 	 * Adding bootstrap support to comment form,
 	 * and some form validation using javascript.
 	 */
-	
+
 	ob_start();
 	$commenter = wp_get_current_commenter();
 	$req = true;
 	$aria_req = ( $req ? " aria-required='true'" : '' );
-	
+
 	$comments_arg = array(
 		'form'	=> array(
 			'class' => 'form-horizontal'
@@ -84,7 +84,7 @@
 	<?php comment_form($comments_arg);
 	echo str_replace('class="comment-form"','class="comment-form" name="commentForm" onsubmit="return validateForm();"',ob_get_clean());
 	?>
-	
+
 		<script>
 			/*
 			basic javascript form validation
@@ -99,32 +99,32 @@
 				d1 		= document.getElementById("d1"),
 				d2 		= document.getElementById("d2"),
 				d3 		= document.getElementById("d3");
-				
+
 			if (x === null || x === "") {
 				d1.innerHTML = "<?php echo __('Name is required', 'wp_babobski'); ?>";
 				flag = false;
 			} else {
 				d1.innerHTML = "";
 			}
-			
+
 			if (y === null || y === "") {
 				d2.innerHTML = "<?php echo __('Email is required', 'wp_babobski'); ?>";
 				flag = false;
 			} else {
 				d2.innerHTML = "";
 			}
-			
+
 			if (z === null || z === "") {
 				d3.innerHTML = "<?php echo __('Comment is required', 'wp_babobski'); ?>";
 				flag = false;
 			} else {
 				d3.innerHTML = "";
 			}
-			
+
 			return flag;
-			
+
 		}
 	</script>
-	
-	
+
+
 </div>
