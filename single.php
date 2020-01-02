@@ -21,8 +21,8 @@
 			<?php the_date(); ?> <?php the_time(); ?>
 		</time>
 		<?php comments_popup_link(__('Leave a Comment', 'wp_babobski'), __('1 Comment', 'wp_babobski'), __('% Comments', 'wp_babobski')); ?>
-		<?php the_content(); ?>			
-	
+		<?php the_content(); ?>
+
 		<?php if ( get_the_author_meta( 'description' ) ) : ?>
 			<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
 			<h3>
@@ -30,11 +30,11 @@
 			</h3>
 			<?php the_author_meta( 'description' ); ?>
 		<?php endif; ?>
-	
+
 		<?php comments_template( '', true ); ?>
-	
+
 	</div>
-	
+
 <?php endwhile; ?>
 
 <?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

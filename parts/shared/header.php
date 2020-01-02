@@ -13,7 +13,7 @@
 			'menu_class'    	=> 'navbar-nav mr-auto',
 			'fallback_cb'   	=> 'bs4navwalker::fallback',
 			'walker'         	=> new bs4navwalker())
-		
+
 		);
 		?>
 		<?php get_search_form(); ?>

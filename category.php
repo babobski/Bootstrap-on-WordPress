@@ -40,4 +40,3 @@
 <?php endif; ?>
 
 <?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
-
