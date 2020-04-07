@@ -1,7 +1,7 @@
 <?php
 /**
  * Search results page
- * 
+ *
  * Please see /external/bootstrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPress
@@ -13,7 +13,7 @@
 
 <?php if ( have_posts() ): ?>
 	<div class="content">
-		<h1><?php echo __('Search Results for', 'wp_babobski'); ?> '<?php echo get_search_query(); ?>'</h1>	
+		<h1><?php echo __('Search Results for', 'wp_babobski'); ?> '<?php echo get_search_query(); ?>'</h1>
 		<ul class="list-unstyled">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<li class="media">

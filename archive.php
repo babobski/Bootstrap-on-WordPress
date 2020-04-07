@@ -7,7 +7,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * Please see /external/bootstrap-utilities.php for info on BsWp::get_template_parts() 
+ * Please see /external/bootstrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPress
  * @subpackage 	Bootstrap 4.4.1
@@ -21,19 +21,19 @@
 <?php if ( is_day() ) : ?>
 	<h1>
 		<?php echo __('Archive', 'wp_babobski'); ?>: <?php echo  get_the_date( 'D M Y' ); ?>
-	</h1>							
+	</h1>
 <?php elseif ( is_month() ) : ?>
 	<h1>
 		<?php echo __('Archive', 'wp_babobski'); ?>: <?php echo  get_the_date( 'M Y' ); ?>
-	</h1>	
+	</h1>
 <?php elseif ( is_year() ) : ?>
 	<h1>
 		<?php echo __('Archive', 'wp_babobski'); ?>: <?php echo  get_the_date( 'Y' ); ?>
-	</h1>								
+	</h1>
 <?php else : ?>
 	<h1>
 		<?php echo __('Archive', 'wp_babobski'); ?>
-	</h1>	
+	</h1>
 <?php endif; ?>
 
 <ul class="media-list">
@@ -58,7 +58,7 @@
 <?php else: ?>
 	<h1>
 		<?php echo __('No posts to display', 'wp_babobski'); ?>
-	</h1>	
+	</h1>
 <?php endif; ?>
 
 <?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
