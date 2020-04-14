@@ -180,6 +180,13 @@
 		}
 	}
 
+	add_action('admin_head', 'custom_logo_guttenberg');
+
+	function custom_logo_guttenberg() {
+		echo '<link rel="stylesheet" type="text/css" href="'.get_bloginfo('stylesheet_directory').
+		'/css/admin-custom.css" />';
+	}
+
 	/* ========================================================================================================================
 
 	Custom login

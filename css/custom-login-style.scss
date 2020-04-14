@@ -1,0 +1,140 @@
+/**
+ * Custom login form css
+ *
+ * @package 	WordPress
+ * @subpackage 	Bootstrap 4.4.1
+ * @autor 		Babobski
+ * @credits     Luke McDonald https://lukemcdonald.com/ for the paterns
+ *
+ */
+
+$black: #333;
+$white: #FFF;
+$grey: #ddd;
+$blue: #00a0d2;
+
+body.login {
+    background-image: url('../images/debut_light.png');
+}
+
+.login {
+    h1 {
+        a {
+            background-image: url('../images/admin_logo.png');
+            background-size: contain;
+            width: 220px;
+        }
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    input {
+        filter: none;
+
+        &[type="text"] {
+            background-color: darken($white, 2%);
+            border-color: $grey;
+        }
+
+        &[type="password"] {
+            background-color: darken($white, 2%);
+            border-color: $grey;
+        }
+    }
+
+    .button-primary {
+        background: $black;
+        color: $white;
+        border: 1px solid $black;
+        text-shadow: none;
+        box-shadow: none;
+        padding: 0px 23px 2px !important;
+        transition: all 200ms ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: darken($black, 5%);
+            color: $white;
+            border: 1px solid darken($black, 5%);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body.login {
+        background-image: url('../images/debut_dark.png');
+        background-color: $black;
+    }
+
+    .login {
+
+        #nav,
+        #backtoblog {
+            a {
+                color: darken($white, 4%);
+            }
+        }
+
+        #login_error,
+        p.message {
+            background-color: darken($black, 3%);
+            color: darken($white, 4%);
+        }
+
+        form {
+            background-color: lighten($black, 7%);
+            border-color: $black;
+        }
+
+        h1 {
+            a {
+                background-image: url('../images/admin_logo_darkmode.png');
+                background-size: contain;
+            }
+        }
+
+        label {
+            font-size: 0.8rem;
+            color: darken($white, 4%);
+        }
+
+        input {
+            filter: none;
+
+            &[type="text"] {
+                background-color: $black;
+                border-color: $black;
+                color: darken($white, 4%);
+            }
+
+            &[type="password"] {
+                background-color: $black;
+                border-color: $black;
+                color: darken($white, 4%);
+            }
+        }
+
+        .button-primary {
+            background: $black;
+            color: $white;
+            border: 1px solid $black;
+            text-shadow: none;
+            box-shadow: none;
+            padding: 0px 23px 2px !important;
+            transition: none;
+            box-shadow: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: darken($black, 5%);
+                color: $white;
+                border: 1px solid darken($black, 5%);
+                box-shadow: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+$black: #333;
+
+.components-button.edit-post-fullscreen-mode-close {
+	position: relative;
+
+	svg {
+		opacity: 0;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		mask: url('../images/back-arrow.svg');
+		mask-position: center;
+		mask-repeat: no-repeat;
+		mask-size: auto 50%;
+		background-color: currentColor;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	#wp-auth-check-wrap {
+		#wp-auth-check {
+			background-color: $black;
+		}
+
+		.wp-auth-check-close {
+			color: #dfdfdf;
+		}
+	}
+}
