@@ -15,9 +15,13 @@ $black: #333;
 		bottom: 0;
 		top: 0;
 		mask: url('../images/back-arrow.svg');
+		-webkit-mask: url('../images/back-arrow.svg');
 		mask-position: center;
+		-webkit-mask-position: center;
 		mask-repeat: no-repeat;
+		-webkit-mask-repeat: no-repeat;
 		mask-size: auto 50%;
+		-webkit-mask-size: auto 50%;
 		background-color: currentColor;
 	}
 }
