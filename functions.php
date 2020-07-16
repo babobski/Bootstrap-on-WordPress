@@ -209,7 +209,7 @@
 	function my_login_logo_url_title() {
 		return 'Bootstrap 4 on WordPress';
 	}
-	add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+	add_filter( 'login_headertext', 'my_login_logo_url_title' );
 	
 
 	/* ========================================================================================================================

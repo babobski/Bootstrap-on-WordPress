@@ -2,7 +2,7 @@
     <div class="input-group">
         <input class="form-control" id="s" name="s" type="text" placeholder="<?php echo __('Search', 'wp_babobski'); ?>">
         <div class="input-group-append">
-            <button class="btn btn-outline-succes" type="submit">
+            <button class="btn btn-outline-success" type="submit">
                 <?php echo __('Search', 'wp_babobski'); ?>
             </button>
         </div>
