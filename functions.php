@@ -89,23 +89,24 @@
 	 * @return void
 	 * @author Keir Whitaker
 	 */
+	if ( !function_exists( 'bootstrap_script_init' ) ) {
+		function bootstrap_script_init() {
 
-	function bootstrap_script_init() {
+			// Get theme version number (located in style.css)
+			$theme = wp_get_theme();
 
-		// Get theme version number (located in style.css)
-		$theme = wp_get_theme();
+			wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.bundle.min.js', array( 'jquery' ), BOOTSTRAP_VERSION, true);
+			wp_enqueue_script('bootstrap');
 
-		wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.bundle.min.js', array( 'jquery' ), BOOTSTRAP_VERSION, true);
-		wp_enqueue_script('bootstrap');
+			wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery', 'bootstrap' ), $theme->get( 'Version' ), true );
+			wp_enqueue_script( 'site' );
 
-		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery', 'bootstrap' ), $theme->get( 'Version' ), true );
-		wp_enqueue_script( 'site' );
+			wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css', array(), BOOTSTRAP_VERSION, 'all' );
+			wp_enqueue_style( 'bootstrap' );
 
-		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css', array(), BOOTSTRAP_VERSION, 'all' );
-		wp_enqueue_style( 'bootstrap' );
-
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', array(), $theme->get( 'Version' ), 'screen' );
-		wp_enqueue_style( 'screen' );
+			wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', array(), $theme->get( 'Version' ), 'screen' );
+			wp_enqueue_style( 'screen' );
+		}
 	}
 
 	/* ========================================================================================================================
@@ -116,7 +117,7 @@
 
 	//remove wp version
 	function theme_remove_version() {
-	return '';
+		return '';
 	}
 
 	add_filter('the_generator', 'theme_remove_version');
@@ -139,35 +140,39 @@
 	add_action('wp_before_admin_bar_render', 'wp_logo_admin_bar_remove', 0);
 
 	// Remove default Dashboard widgets
-	function disable_default_dashboard_widgets() {
+	if ( !function_exists( 'disable_default_dashboard_widgets' ) ) {
+		function disable_default_dashboard_widgets() {
 
-		//remove_meta_box('dashboard_right_now', 'dashboard', 'core');
-		remove_meta_box('dashboard_activity', 'dashboard', 'core');
-		remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');
-		remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');
-		remove_meta_box('dashboard_plugins', 'dashboard', 'core');
-
-		remove_meta_box('dashboard_quick_press', 'dashboard', 'core');
-		remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');
-		remove_meta_box('dashboard_primary', 'dashboard', 'core');
-		remove_meta_box('dashboard_secondary', 'dashboard', 'core');
+			//remove_meta_box('dashboard_right_now', 'dashboard', 'core');
+			remove_meta_box('dashboard_activity', 'dashboard', 'core');
+			remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');
+			remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');
+			remove_meta_box('dashboard_plugins', 'dashboard', 'core');
+	
+			remove_meta_box('dashboard_quick_press', 'dashboard', 'core');
+			remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');
+			remove_meta_box('dashboard_primary', 'dashboard', 'core');
+			remove_meta_box('dashboard_secondary', 'dashboard', 'core');
+		}
 	}
 	add_action('admin_menu', 'disable_default_dashboard_widgets');
 
 	remove_action('welcome_panel', 'wp_welcome_panel');
 
 	// Disable the emoji's
-	function disable_emojis() {
-		remove_action('wp_head', 'print_emoji_detection_script', 7);
-		remove_action('admin_print_scripts', 'print_emoji_detection_script');
-		remove_action('wp_print_styles', 'print_emoji_styles');
-		remove_action('admin_print_styles', 'print_emoji_styles');
-		remove_filter('the_content_feed', 'wp_staticize_emoji');
-		remove_filter('comment_text_rss', 'wp_staticize_emoji');
-		remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+	if ( !function_exists( 'disable_emojis' ) ) {
+		function disable_emojis() {
+			remove_action('wp_head', 'print_emoji_detection_script', 7);
+			remove_action('admin_print_scripts', 'print_emoji_detection_script');
+			remove_action('wp_print_styles', 'print_emoji_styles');
+			remove_action('admin_print_styles', 'print_emoji_styles');
+			remove_filter('the_content_feed', 'wp_staticize_emoji');
+			remove_filter('comment_text_rss', 'wp_staticize_emoji');
+			remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
 
-		// Remove from TinyMCE
-		add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
+			// Remove from TinyMCE
+			add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
+		}
 	}
 	add_action('init', 'disable_emojis');
 
@@ -182,9 +187,11 @@
 
 	add_action('admin_head', 'custom_logo_guttenberg');
 
-	function custom_logo_guttenberg() {
-		echo '<link rel="stylesheet" type="text/css" href="'.get_bloginfo('stylesheet_directory').
-		'/css/admin-custom.css" />';
+	if ( !function_exists( 'custom_logo_guttenberg' ) ) {
+		function custom_logo_guttenberg() {
+			echo '<link rel="stylesheet" type="text/css" href="'.get_bloginfo('stylesheet_directory').
+			'/css/admin-custom.css" />';
+		}
 	}
 
 	/* ========================================================================================================================
@@ -194,20 +201,26 @@
 	======================================================================================================================== */
 
 	// Add custom css
-	function my_custom_login() {
-		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
+	if ( !function_exists( 'my_custom_login' ) ) {
+		function my_custom_login() {
+			echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
+		}
 	}
 	add_action('login_head', 'my_custom_login');
 
 	// Link the logo to the home of our website
-	function my_login_logo_url() {
-		return get_bloginfo( 'url' );
+	if ( !function_exists( 'my_login_logo_url' ) ) {
+		function my_login_logo_url() {
+			return get_bloginfo( 'url' );
+		}
 	}
 	add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 	// Change the title text
+	if ( !function_exists( 'my_login_logo_url_title' ) ) {
 	function my_login_logo_url_title() {
-		return 'Bootstrap 4 on WordPress';
+		return get_bloginfo( 'name' );
+	}
 	}
 	add_filter( 'login_headertext', 'my_login_logo_url_title' );
 	
@@ -224,18 +237,20 @@
 	 * @return void
 	 * @author Keir Whitaker
 	 */
-	function bootstrap_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
-		?>
-		<?php if ( $comment->comment_approved == '1' ): ?>
-		<li class="media">
-			<div class="media-left">
-				<?php echo get_avatar( $comment ); ?>
-			</div>
-			<div class="media-body">
-				<h4 class="media-heading"><?php comment_author_link() ?></h4>
-				<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
-				<?php comment_text() ?>
-			</div>
-		<?php endif;
+	if (!function_exists( 'bootstrap_comment' )) {
+		function bootstrap_comment( $comment, $args, $depth ) {
+			$GLOBALS['comment'] = $comment;
+			?>
+			<?php if ( $comment->comment_approved == '1' ): ?>
+			<li class="media">
+				<div class="media-left">
+					<?php echo get_avatar( $comment ); ?>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading"><?php comment_author_link() ?></h4>
+					<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
+					<?php comment_text() ?>
+				</div>
+			<?php endif;
+		}
 	}
