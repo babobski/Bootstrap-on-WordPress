@@ -5,7 +5,7 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 4.5.0
+	 * @subpackage 	Bootstrap 4.5.2
 	 * @autor 		Babobski
 	 */
 
@@ -37,6 +37,7 @@
 	Add html 5 support to wordpress elements
 
 	======================================================================================================================== */
+
 	add_theme_support( 'html5', array(
 		'comment-list',
 		'search-form',
