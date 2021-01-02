@@ -24,7 +24,7 @@
 	</h2>
 	<?php the_author_meta( 'description' ); ?>
 <?php endif; ?>
-<ul class="media-list">
+<ul class="list-unstyled">
 	<?php rewind_posts(); while ( have_posts() ) : the_post(); ?>
 	<li class="media">
 		<div class="media-body">

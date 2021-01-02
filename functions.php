@@ -243,12 +243,12 @@
 			$GLOBALS['comment'] = $comment;
 			?>
 			<?php if ( $comment->comment_approved == '1' ): ?>
-			<li class="media">
-				<div class="media-left">
+			<li class="row">
+				<div class="col-4 col-md-2">
 					<?php echo get_avatar( $comment ); ?>
 				</div>
-				<div class="media-body">
-					<h4 class="media-heading"><?php comment_author_link() ?></h4>
+				<div class="col-8 col-md-10">
+					<h4><?php comment_author_link() ?></h4>
 					<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
 					<?php comment_text() ?>
 				</div>
