@@ -1,5 +1,5 @@
-Bootstrap 4 on Wordpress
+Bootstrap on WordPress
 ===========
-Bootstrap 4 on WordPress is a blank bootstrap 4 ready WordPress theme.
+Bootstrap on WordPress is a blank bootstrap 5 ready WordPress theme.
 
-For the full documentation visit the [Bootstrap 4 on WordPress](http://bootstrap4onwordpress.babobski.nl/) website.
+For the full documentation visit the [Bootstrap on WordPress](https://bootstraponwordpress.com/) website.

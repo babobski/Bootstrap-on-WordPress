@@ -1,3 +1,17 @@
+	BOOTSTRAP ON WORDPRESS
+	
+	Created by Babobski.
+	Version 3.0 02.01.2020
+	
+	- - - - - - - - - - - - - - - - - - - - - - -
+	
+	The Bootstrap on WordPress Theme is build upon the
+	Starker totaly naked theme. This theme is
+	created for easy intergreation of wordpress in
+	your theme. Curently updated for Bootstrap 5
+	
+	- - - - - - - - - - - - - - - - - - - - - - -
+	
 	BOOTSTRAP 4.4.1
 	
 	Created by Babobski.
