@@ -36,7 +36,7 @@
 			<?php comments_number(); ?>
 		</h2>
 
-		<ul class="list-unstyled">
+		<ul class="list-unstyled container-fluid">
 			<?php wp_list_comments( array( 'callback' => 'bootstrap_comment' ) ); ?>
 		</ul>
 
