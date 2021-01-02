@@ -5,11 +5,11 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 4.5.3
+	 * @subpackage 	Bootstrap 5.0.0-beta
 	 * @autor 		Babobski
 	 */
 
-	define('BOOTSTRAP_VERSION', '4.5.3');
+	define('BOOTSTRAP_VERSION', '5.0.0');
 
 	/* ========================================================================================================================
 
@@ -30,7 +30,7 @@
 	======================================================================================================================== */
 
 	require_once( 'external/bootstrap-utilities.php' );
-	require_once( 'external/bs4navwalker.php' );
+	require_once( 'external/bs5navwalker.php' );
 
 	/* ========================================================================================================================
 
