@@ -87,12 +87,18 @@ body.login {
         form {
             background-color: lighten($black, 7%);
             border-color: $black;
+            color: darken($white, 4%);
         }
 
         h1 {
+            color: darken($white, 4%);
+            &.admin-email__heading {
+                color: darken($white, 4%);
+            }
             a {
                 background-image: url('../images/admin_logo_darkmode.png');
                 background-size: contain;
+                
             }
         }
 

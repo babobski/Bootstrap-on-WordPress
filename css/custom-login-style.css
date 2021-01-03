@@ -1,1 +1,113 @@
-body.login{background-image:url("../images/debut_light.png")}.login h1 a{background-image:url("../images/admin_logo.png");background-size:contain;width:220px}.login label{font-size:.8rem}.login input{filter:none}.login input[type=text]{background-color:#fafafa;border-color:#ddd}.login input[type=password]{background-color:#fafafa;border-color:#ddd}.login .button-primary{background:#333;color:#fff;border:1px solid #333;text-shadow:none;box-shadow:none;padding:0px 23px 2px !important;transition:all 200ms ease}.login .button-primary:hover,.login .button-primary:focus,.login .button-primary:active{background:#262626;color:#fff;border:1px solid #262626}@media(prefers-color-scheme: dark){body.login{background-image:url("../images/debut_dark.png");background-color:#333}.login #nav a,.login #backtoblog a{color:#f5f5f5}.login #login_error,.login p.message{background-color:#2b2b2b;color:#f5f5f5}.login form{background-color:#454545;border-color:#333}.login h1 a{background-image:url("../images/admin_logo_darkmode.png");background-size:contain}.login label{font-size:.8rem;color:#f5f5f5}.login input{filter:none}.login input[type=text]{background-color:#333;border-color:#333;color:#f5f5f5}.login input[type=password]{background-color:#333;border-color:#333;color:#f5f5f5}.login .button-primary{background:#333;color:#fff;border:1px solid #333;text-shadow:none;box-shadow:none;padding:0px 23px 2px !important;transition:none;box-shadow:none}.login .button-primary:hover,.login .button-primary:focus,.login .button-primary:active{background:#262626;color:#fff;border:1px solid #262626;box-shadow:none}}/*# sourceMappingURL=custom-login-style.css.map */
+/**
+ * Custom login form css
+ *
+ * @package 	WordPress
+ * @subpackage 	Bootstrap 5.0.0-beta
+ * @autor 		Babobski
+ * @credits     Luke McDonald https://lukemcdonald.com/ for the paterns
+ *
+ */
+body.login {
+  background-image: url("../images/debut_light.png");
+}
+
+.login h1 a {
+  background-image: url("../images/admin_logo.png");
+  background-size: contain;
+  width: 220px;
+}
+.login label {
+  font-size: 0.8rem;
+}
+.login input {
+  filter: none;
+}
+.login input[type=text] {
+  background-color: #fafafa;
+  border-color: #ddd;
+}
+.login input[type=password] {
+  background-color: #fafafa;
+  border-color: #ddd;
+}
+.login .button-primary {
+  background: #333;
+  color: #FFF;
+  border: 1px solid #333;
+  text-shadow: none;
+  box-shadow: none;
+  padding: 0px 23px 2px !important;
+  transition: all 200ms ease;
+}
+.login .button-primary:hover, .login .button-primary:focus, .login .button-primary:active {
+  background: #262626;
+  color: #FFF;
+  border: 1px solid #262626;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.login {
+    background-image: url("../images/debut_dark.png");
+    background-color: #333;
+  }
+
+  .login #nav a,
+.login #backtoblog a {
+    color: whitesmoke;
+  }
+  .login #login_error,
+.login p.message {
+    background-color: #2b2b2b;
+    color: whitesmoke;
+  }
+  .login form {
+    background-color: #454545;
+    border-color: #333;
+    color: whitesmoke;
+  }
+  .login h1 {
+    color: whitesmoke;
+  }
+  .login h1.admin-email__heading {
+    color: whitesmoke;
+  }
+  .login h1 a {
+    background-image: url("../images/admin_logo_darkmode.png");
+    background-size: contain;
+  }
+  .login label {
+    font-size: 0.8rem;
+    color: whitesmoke;
+  }
+  .login input {
+    filter: none;
+  }
+  .login input[type=text] {
+    background-color: #333;
+    border-color: #333;
+    color: whitesmoke;
+  }
+  .login input[type=password] {
+    background-color: #333;
+    border-color: #333;
+    color: whitesmoke;
+  }
+  .login .button-primary {
+    background: #333;
+    color: #FFF;
+    border: 1px solid #333;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0px 23px 2px !important;
+    transition: none;
+    box-shadow: none;
+  }
+  .login .button-primary:hover, .login .button-primary:focus, .login .button-primary:active {
+    background: #262626;
+    color: #FFF;
+    border: 1px solid #262626;
+    box-shadow: none;
+  }
+}
+
+/*# sourceMappingURL=custom-login-style.css.map */
