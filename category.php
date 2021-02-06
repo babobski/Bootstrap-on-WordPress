@@ -9,7 +9,10 @@
  * @autor 		Babobski
  */
 ?>
-<?php BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php BsWp::get_template_parts( array( 
+	'parts/shared/html-header', 
+	'parts/shared/header' 
+) ); ?>
 
 <?php if ( have_posts() ): ?>
 	<h1>
@@ -37,4 +40,7 @@
 	</h1>
 <?php endif; ?>
 
-<?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php BsWp::get_template_parts( array( 
+	'parts/shared/footer',
+	'parts/shared/html-footer' 
+) ); ?>

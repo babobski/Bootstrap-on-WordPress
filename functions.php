@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * Bootstrap 4 on Wordpress functions and definitions
+	 * Bootstrap on Wordpress functions and definitions
 	 *
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
