@@ -35,9 +35,10 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu {
     $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
     $attributes .= !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
     $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
-    $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
+    $itemHref = $args->walker->has_children ? '#' : esc_attr($item->url);
+    $attributes .= !empty($item->url) ? ' href="' . $itemHref . '"' : '';
 
-    $attributes .= ($args->walker->has_children) ? ' class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="nav-link"';
+    $attributes .= ($args->walker->has_children) ? ' class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"' : ' class="nav-link"';
 
     $item_output = $args->before;
     $item_output .= ($depth > 0) ? '<a class="dropdown-item"' . $attributes . '>' : '<a' . $attributes . '>';
