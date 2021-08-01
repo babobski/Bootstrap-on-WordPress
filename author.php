@@ -5,7 +5,7 @@
  * Please see /external/bootstrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPres6
- * @subpackage 	Bootstrap 5.0.1
+ * @subpackage 	Bootstrap 5.0.2
  * @autor 		Babobski
  */
 ?>

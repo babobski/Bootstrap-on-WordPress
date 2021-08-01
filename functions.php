@@ -5,11 +5,11 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 5.0.1
+	 * @subpackage 	Bootstrap 5.0.2
 	 * @autor 		Babobski
 	 */
 
-	define('BOOTSTRAP_VERSION', '5.0.1');
+	define('BOOTSTRAP_VERSION', '5.0.2');
 
 	/* ========================================================================================================================
 
