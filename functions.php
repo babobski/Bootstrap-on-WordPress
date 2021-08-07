@@ -191,7 +191,7 @@
 	if ( !function_exists( 'custom_logo_guttenberg' ) ) {
 		function custom_logo_guttenberg() {
 			echo '<link rel="stylesheet" type="text/css" href="'.get_bloginfo('stylesheet_directory').
-			'/css/admin-custom.css" />';
+			'/css/admin-custom.css?v=1.0.0" />';
 		}
 	}
 
@@ -204,7 +204,7 @@
 	// Add custom css
 	if ( !function_exists( 'my_custom_login' ) ) {
 		function my_custom_login() {
-			echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
+			echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css?v=1.0.0" />';
 		}
 	}
 	add_action('login_head', 'my_custom_login');
