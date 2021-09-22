@@ -10,7 +10,7 @@
  * Please see /external/bootsrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 5.1.0
+ * @subpackage 	Bootstrap 5.1.1
  * @autor 		Babobski
  */
 ?>
