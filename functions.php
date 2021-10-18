@@ -5,11 +5,12 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 5.1.1
+	 * @subpackage 	Bootstrap 5.1.3
 	 * @autor 		Babobski
 	 */
 
-	define('BOOTSTRAP_VERSION', '5.1.1');
+	define('BOOTSTRAP_VERSION', '5.1.3');
+	define('BOOTSTRAP_ICON_VERSION', '1.6.1');
 
 	/* ========================================================================================================================
 
@@ -104,6 +105,9 @@
 
 			wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), BOOTSTRAP_VERSION, 'all' );
 			wp_enqueue_style( 'bootstrap' );
+
+			wp_register_style( 'bootstrap_icons', get_template_directory_uri() . '/css/bootstrap-icons.css', array(), BOOTSTRAP_ICON_VERSION, 'all' );
+			wp_enqueue_style( 'bootstrap_icons' );
 
 			wp_register_style( 'screen', get_template_directory_uri() . '/style.css', array(), $theme->get( 'Version' ), 'screen' );
 			wp_enqueue_style( 'screen' );
