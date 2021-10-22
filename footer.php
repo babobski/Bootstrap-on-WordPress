@@ -12,5 +12,10 @@
  * @subpackage 	Bootstrap 5.1.3
  * @autor 		Babobski
  */
+$BsWp = new BsWp;
+
+$BsWp->get_template_parts([
+	'parts/shared/footer',
+	'parts/shared/html-footer'
+]);
 ?>
-<?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

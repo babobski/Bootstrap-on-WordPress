@@ -12,5 +12,10 @@
  * @subpackage 	Bootstrap 5.1.3
  * @autor 		Babobski
  */
+$BsWp = new BsWp;
+
+$BsWp->get_template_parts([
+	'parts/shared/html-header', 
+	'parts/shared/header'
+]);
 ?>
-<?php BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>

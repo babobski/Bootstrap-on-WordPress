@@ -13,11 +13,13 @@
  * @subpackage 	Bootstrap 5.1.3
  * @autor 		Babobski
  */
-?>
-<?php BsWp::get_template_parts( array( 
+$BsWp = new BsWp;
+
+$BsWp->get_template_parts([
 	'parts/shared/html-header', 
-	'parts/shared/header' 
-) ); ?>
+	'parts/shared/header'
+]);
+?>
 
 <?php if ( have_posts() ): ?>
 
@@ -62,7 +64,9 @@
 	</h1>
 <?php endif; ?>
 
-<?php BsWp::get_template_parts( array( 
+<?php 
+$BsWp->get_template_parts([
 	'parts/shared/footer',
-	'parts/shared/html-footer' 
-) ); ?>
+	'parts/shared/html-footer'
+]);
+?>

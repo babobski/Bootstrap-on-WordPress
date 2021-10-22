@@ -13,11 +13,13 @@
  * @subpackage 	Bootstrap 5.1.3
  * @autor 		Babobski
  */
-?>
-<?php BsWp::get_template_parts( array( 
+$BsWp = new BsWp;
+
+$BsWp->get_template_parts([
 	'parts/shared/html-header', 
-	'parts/shared/header' 
-) ); ?>
+	'parts/shared/header'
+]);
+?>
 
 <div class="content">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -31,7 +33,9 @@
 	<?php endwhile; ?>
 </div>
 
-<?php BsWp::get_template_parts( array( 
+<?php 
+$BsWp->get_template_parts([
 	'parts/shared/footer',
-	'parts/shared/html-footer' 
-) ); ?>
+	'parts/shared/html-footer'
+]);
+?>

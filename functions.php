@@ -14,19 +14,19 @@
 
 	/* ========================================================================================================================
 
-	Add language support to theme
+	01. Add language support to theme
 
 	======================================================================================================================== */
+
 	add_action('after_setup_theme', 'my_theme_setup');
+
 	function my_theme_setup(){
 		load_theme_textdomain('wp_babobski', get_template_directory() . '/language');
 	}
 
-
-
 	/* ========================================================================================================================
 
-	Required external files
+	02. Required external files
 
 	======================================================================================================================== */
 
@@ -35,21 +35,21 @@
 
 	/* ========================================================================================================================
 
-	Add html 5 support to wordpress elements
+    03. Add html 5 support to wordpress elements
 
 	======================================================================================================================== */
 
-	add_theme_support( 'html5', array(
+	add_theme_support( 'html5', [
 		'comment-list',
 		'search-form',
 		'comment-form',
 		'gallery',
 		'caption',
-	) );
+	]);
 
 	/* ========================================================================================================================
 
-	Theme specific settings
+	04. Theme specific settings
 
 	======================================================================================================================== */
 
@@ -57,21 +57,23 @@
 
 	//add_image_size( 'name', width, height, crop true|false );
 
-	register_nav_menus(array('primary' => 'Primary Navigation'));
+	register_nav_menus([
+		'primary' => 'Primary Navigation'
+	]);
 
 	/* ========================================================================================================================
 
-	Actions and Filters
+	05. Actions and Filters
 
 	======================================================================================================================== */
 
 	add_action( 'wp_enqueue_scripts', 'bootstrap_script_init' );
 
-	add_filter( 'body_class', array( 'BsWp', 'add_slug_to_body_class' ) );
+	add_filter( 'body_class', ['BsWp', 'add_slug_to_body_class'] );
 
 	/* ========================================================================================================================
 
-	Custom Post Types - include custom post types and taxonomies here e.g.
+	06. Custom Post Types - include custom post types and taxonomies here e.g.
 
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 
@@ -81,7 +83,7 @@
 
 	/* ========================================================================================================================
 
-	Scripts
+	07. Scripts
 
 	======================================================================================================================== */
 
@@ -97,26 +99,18 @@
 			// Get theme version number (located in style.css)
 			$theme = wp_get_theme();
 
-			wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array( 'jquery' ), BOOTSTRAP_VERSION, true);
-			wp_enqueue_script('bootstrap');
+			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', [ 'jquery' ], BOOTSTRAP_VERSION, true );
+			wp_enqueue_script( 'site', get_template_directory_uri() . '/js/site.js', [ 'jquery', 'bootstrap' ], $theme->get( 'Version' ), true );
 
-			wp_register_script( 'site', get_template_directory_uri() . '/js/site.js', array( 'jquery', 'bootstrap' ), $theme->get( 'Version' ), true );
-			wp_enqueue_script( 'site' );
-
-			wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), BOOTSTRAP_VERSION, 'all' );
-			wp_enqueue_style( 'bootstrap' );
-
-			wp_register_style( 'bootstrap_icons', get_template_directory_uri() . '/css/bootstrap-icons.css', array(), BOOTSTRAP_ICON_VERSION, 'all' );
-			wp_enqueue_style( 'bootstrap_icons' );
-
-			wp_register_style( 'screen', get_template_directory_uri() . '/style.css', array(), $theme->get( 'Version' ), 'screen' );
-			wp_enqueue_style( 'screen' );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', [], BOOTSTRAP_VERSION, 'all' );
+			wp_enqueue_style( 'bootstrap_icons', get_template_directory_uri() . '/css/bootstrap-icons.css', [], BOOTSTRAP_ICON_VERSION, 'all' );
+			wp_enqueue_style( 'screen', get_template_directory_uri() . '/style.css', [], $theme->get( 'Version' ), 'screen' );
 		}
 	}
 
 	/* ========================================================================================================================
 
-	Security & cleanup wp admin
+	08. Security & cleanup wp admin
 
 	======================================================================================================================== */
 
@@ -186,7 +180,7 @@
 		if (is_array($plugins)) {
 			return array_diff($plugins, array('wpemoji'));
 		} else {
-			return array();
+			return [];
 		}
 	}
 
@@ -201,7 +195,26 @@
 
 	/* ========================================================================================================================
 
-	Custom login
+	09. Disabeling Guttenberg
+
+	======================================================================================================================== */
+
+	// Optional disable guttenberg block editor
+	add_filter( 'use_block_editor_for_post', '__return_false' );
+
+
+	//Remove Gutenberg Block Library CSS from loading on the frontend
+	function smartwp_remove_wp_block_library_css() {
+		wp_dequeue_style('wp-block-library');
+		wp_dequeue_style('wp-block-library-theme');
+		wp_dequeue_style('wc-block-style'); // Remove WooCommerce block CSS
+	wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront 
+	}
+	add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100);
+
+	/* ========================================================================================================================
+
+	10. Custom login
 
 	======================================================================================================================== */
 
@@ -223,16 +236,16 @@
 
 	// Change the title text
 	if ( !function_exists( 'my_login_logo_url_title' ) ) {
-	function my_login_logo_url_title() {
-		return get_bloginfo( 'name' );
-	}
+		function my_login_logo_url_title() {
+			return get_bloginfo( 'name' );
+		}
 	}
 	add_filter( 'login_headertext', 'my_login_logo_url_title' );
 	
 
 	/* ========================================================================================================================
 
-	Comments
+	11. Comments
 
 	======================================================================================================================== */
 

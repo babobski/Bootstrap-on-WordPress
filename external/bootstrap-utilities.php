@@ -3,18 +3,19 @@
 	/**
 	 * BsWp
 	 *
-	 * Bootstrap Utilities Class v.1.1
+	 * Bootstrap Utilities Class v.1.2
 	 *
 	 * @package 	WordPress
 	 * @subpackage 	Bootstrap 5.1.3
 	 * @autor 		Babobski
 	 *
 	 * We've included a number of helper functions that we use in every theme we produce.
-	 * The main one that is used in Starkers is BsWp::add_slug_to_body_class(), this will add the page or post slug to the body class
+	 * The main one that is used in Starkers is $BsWp->add_slug_to_body_class(), this will add the page or post slug to the body class
 	 *
 	 */
-	 
-	 class BsWp {
+
+	class BsWp
+	{
 
     	/**
     	 * Print a pre formatted array to the browser - very useful for debugging
@@ -23,7 +24,7 @@
     	 * @return 	void
     	 * @author 	Keir Whitaker
     	 **/
-    	public static function print_a( $a ) {
+    	public function print_a( $a ) {
     		print( '<pre>' );
     		print_r( $a, true );
     		print( '</pre>' );
@@ -38,7 +39,7 @@
     	 * @return 	void
     	 * @author 	Keir Whitaker
     	 **/
-    	public static function get_template_parts( $parts = array() ) {
+    	public function get_template_parts( $parts = array() ) {
     		foreach( $parts as $part ) {
     			get_template_part( $part );
     		};
@@ -46,13 +47,13 @@
 
     	/**
     	 * Pass in a path and get back the page ID
-    	 * e.g. BsWp::get_page_id_from_path('about/terms-and-conditions');
+    	 * e.g. get_page_id_from_path('about/terms-and-conditions');
     	 *
     	 * @param 	string 
     	 * @return 	integer
     	 * @author 	Keir Whitaker
     	 **/
-    	public static function get_page_id_from_path( $path ) {
+    	public function get_page_id_from_path( $path ) {
     		$page = get_page_by_path( $path );
     		if( $page ) {
     			return $page->ID;
@@ -69,7 +70,7 @@
     	 * @return 	array
     	 * @author 	Keir Whitaker
     	 */
-    	public static function add_slug_to_body_class( $classes ) {
+    	public function add_slug_to_body_class( $classes ) {
     		global $post;
 	   
     		if( is_home() ) {			
@@ -93,7 +94,7 @@
     	 * @return 	string
     	 * @author 	Keir Whitaker
     	 */
-    	public static function get_category_id( $cat_name ){
+    	public function get_category_id( $cat_name ){
     		$term = get_term_by( 'name', $cat_name, 'category' );
     		return $term->term_id;
     	}
