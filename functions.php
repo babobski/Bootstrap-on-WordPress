@@ -10,7 +10,7 @@
 	 */
 
 	define('BOOTSTRAP_VERSION', '5.1.3');
-	define('BOOTSTRAP_ICON_VERSION', '1.6.1');
+	define('BOOTSTRAP_ICON_VERSION', '1.7.2');
 
 	/* ========================================================================================================================
 
@@ -69,7 +69,8 @@
 
 	add_action( 'wp_enqueue_scripts', 'bootstrap_script_init' );
 
-	add_filter( 'body_class', ['BsWp', 'add_slug_to_body_class'] );
+	$BsWp = new BsWp;
+	add_filter( 'body_class', [$BsWp, 'add_slug_to_body_class'] );
 
 	/* ========================================================================================================================
 
