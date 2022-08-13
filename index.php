@@ -9,7 +9,7 @@
  * Please see /external/bootstrap-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 5.1.3
+ * @subpackage 	Bootstrap 5.2.0
  * @autor 		Babobski
  */
 $BsWp = new BsWp;

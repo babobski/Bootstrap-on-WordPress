@@ -5,12 +5,12 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 5.1.3
+	 * @subpackage 	Bootstrap 5.2.0
 	 * @autor 		Babobski
 	 */
 
-	define('BOOTSTRAP_VERSION', '5.1.3');
-	define('BOOTSTRAP_ICON_VERSION', '1.8.2');
+	define('BOOTSTRAP_VERSION', '5.2.0');
+	define('BOOTSTRAP_ICON_VERSION', '1.9.1');
 
 	/* ========================================================================================================================
 
@@ -101,7 +101,7 @@
 			$theme = wp_get_theme();
 
 			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', [ 'jquery' ], BOOTSTRAP_VERSION, true );
-			wp_enqueue_script( 'site', get_template_directory_uri() . '/js/site.js', [ 'jquery', 'bootstrap' ], $theme->get( 'Version' ), true );
+			wp_enqueue_script( 'site', get_template_directory_uri() . '/js/app.js', [ 'jquery', 'bootstrap' ], $theme->get( 'Version' ), true );
 
 			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', [], BOOTSTRAP_VERSION, 'all' );
 			wp_enqueue_style( 'bootstrap_icons', get_template_directory_uri() . '/css/bootstrap-icons.css', [], BOOTSTRAP_ICON_VERSION, 'all' );
