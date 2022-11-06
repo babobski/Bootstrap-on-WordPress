@@ -10,7 +10,7 @@
  * Please see /external/bootsrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 5.2.0
+ * @subpackage 	Bootstrap 5.2.2
  * @autor 		Babobski
  */
 $BsWp = new BsWp;
