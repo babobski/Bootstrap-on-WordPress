@@ -10,7 +10,7 @@
  * Please see /external/bootsrap-utilities.php for info on BsWp::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Bootstrap 5.3.2
+ * @subpackage 	Bootstrap 5.3.3
  * @autor 		Babobski
  */
 $BsWp = new BsWp;
@@ -21,7 +21,7 @@ $BsWp->get_template_parts([
 ]);
 ?>
 
-<div class="content">
+
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 		<h2>
@@ -31,7 +31,7 @@ $BsWp->get_template_parts([
 		<?php comments_template( '', true ); ?>
 
 	<?php endwhile; ?>
-</div>
+
 
 <?php 
 $BsWp->get_template_parts([
