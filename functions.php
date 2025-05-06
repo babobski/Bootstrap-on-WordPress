@@ -5,7 +5,7 @@
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Bootstrap 5.3.3
+	 * @subpackage 	Bootstrap 5.3.6
 	 * @autor 		Babobski
 	 */
 
