@@ -9,8 +9,8 @@
 	 * @autor 		Babobski
 	 */
 
-	define('BOOTSTRAP_VERSION', '5.3.3');
-	define('BOOTSTRAP_ICON_VERSION', '1.11.2');
+	define('BOOTSTRAP_VERSION', '5.3.6');
+	define('BOOTSTRAP_ICON_VERSION', '1.12.1');
 
 	/* ========================================================================================================================
 
